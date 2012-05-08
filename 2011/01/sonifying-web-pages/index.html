@@ -1,0 +1,159 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=en><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang=en><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang=en><![endif]-->
+<!--[if gt IE 8]><!--> <html class=no-js lang=en manifest="manifest.appcache"> <!--<![endif]-->
+<head>
+  <meta charset=utf-8>
+
+  <title>Sonifying Web Pages</title>
+  <meta name=description content="">
+  <meta name=author content="">
+  <meta name=viewport content="width=device-width,initial-scale=1">
+
+  <link rel=alternate type="application/rss+xml" title="NAMEBOUND Feed" href="http://feed.namebound.com/gridinoc">
+  <link rel=stylesheet href='/wp-content/themes/publish/css/d77e45c.css'>
+
+  <script type="text/javascript" src="http://use.typekit.com/jze3ujd.js"></script>
+  <script type="text/javascript">try{Typekit.load()}catch(e){};</script>
+  
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+  
+<!-- <link rel="canonical" href="/tag/1984/" /> -->
+
+<style type="text/css">
+sup {
+	vertical-align: 60%;
+	font-size: 75%;
+	line-height: 100%;
+}
+sub {
+	vertical-align: -10%;
+	font-size: 75%;
+	line-height: 100%;
+}
+.amp {
+	/*font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", "Warnock Pro", serif;*/
+	font-weight: normal;
+	/*font-style: italic;*/
+	/*font-size: 1.1em;
+	line-height: 1em;*/
+        font-weight: 300;
+}
+.caps {
+	/*font-size: 90%;*/
+        -moz-font-feature-settings: "smcp=1";
+        -ms-font-feature-settings: "smcp" 1;
+}
+.dquo {
+	margin-left:-.40em;
+}
+.quo {
+	margin-left:-.2em;
+}
+/* because formatting .numbers should consider your current font settings, we will not style it here */
+
+.numbers {
+        -moz-font-feature-settings: "pnum=1,onum=1";
+        -ms-font-feature-settings: "pnum" 1,"onum" 1;
+}
+
+body > header h2 {
+font-weight: 300;
+font-style: normal;
+}
+
+h3, h4, h5, h6 {
+color: black;
+}
+</style>
+</head>
+<body>
+
+  <header role=banner>
+    <hgroup>
+      <h1>
+		<a href="/" title="NAMEBOUND" rel=home>
+					<img alt=NAMEBOUND src="/wp-content/themes/publish/img/namebound.svg">
+		</a>
+	 </h1>
+      <h2>‘for magic consists in this, the true naming of a thing’ — Ursula Le Guin, A Wizard of Earthsea</h2>
+    </hgroup>
+  </header>
+
+  <nav role=navigation>
+    <ul id="menu-main" class="menu"></ul>  </nav>
+<div role=main class=single>
+  
+    
+<article id="post-343" class="post-343 post type-post status-publish format-standard hentry category-sonification-3 tag-ambient-devices tag-multimodal-interaction tag-perception tag-preattentive-processing tag-sonification">
+  <header class=entry-header>
+    <h1 class=entry-title>Sonifying Web Pages</h1>
+
+        <div class=entry-meta>
+      <a href="/2011/01/sonifying-web-pages/" title="03:01" rel="bookmark"><time class="entry-date" datetime="2011-01-20T03:01:41+00:00" pubdate>January 20, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="/profile/" title="View all posts by Laurian" rel="author">Laurian</a></span></span>    </div>
+      </header>
+
+  <div class=entry-content>
+    <p>I’ve always thought of <a href="http://en.wikipedia.org/wiki/Sonification">sonification</a> (the use of non-​speech audio to convey information or perceptualize data) in the context of adding more dimensions when visualising dynamic data (as sound augments visual perception), or in ambient devices (think <a href="http://scholar.google.co.uk/scholar?q=Preattentive+processing+sound&amp;hl=en&amp;as_sdt=0&amp;as_vis=1&amp;oi=scholart">preattentive processing of sounds</a>).</p>
+<p>The following twitter posts by <a href="http://twitter.com/davidascher/status/27847452174323713">David Ascher</a>, <a href="http://twitter.com/humphd/status/27847797965324288">David Humphrey</a> and <a href="http://twitter.com/brianking/status/27852805758787584">Brian King</a> prompted me to think of how sonification could be used in a browser.</p>
+<p style="text-align: center;"><img class="size-full wp-image-345 aligncenter" title="Twitter conversation, sonification" src="/wp-content/uploads/2011/01/conversation1.jpg" alt="" width="478" height="682" /></p>
+<p>How could a web page be sonified? What exactly would have meaning: the byte stream, the markup, a <span class="caps">DOM</span> traversal, visual layout or the elements with known semantics?</p>
+<p>If you hear a page before you see it (loading a page in background), would you recognise it? The sound of a tab loading could tell you if it is worthy to switch to it or to close right-​away? Should ads sound like noise? Comments like chatter?</p>
+<p>Max Newlands <a href="http://www.algomusic.com/movies/MaxNewlands/">experimented with markup sonification</a> (<span class="numbers">2007</span>), but markup alone nowadays maps poorly to the visual rendering of the page, therefore not augmenting the visual recollection of the page and surely not priming this recollection.</p>
+<p>Sonification of images was successfully used to restore a form of sight to the blind (see NewScientist’s “<a href="http://www.newscientist.com/article/mg20727731.500-sensory-hijack-rewiring-brains-to-see-with-sound.html?full=true">Sensory hijack: rewiring brains to see with sound</a>” article). I’m going to experiment here with <a href="http://twitter.com/seeingwithsound">Peter Meijer</a>’s technique that maps <a href="http://www.seeingwithsound.com">visual information to sound</a> on the visual appearance of web pages.</p>
+<p><span id="more-343"></span></p>
+<p>Peter’s <a href="http://www.seeingwithsound.com/winvoice.htm">vOICe</a> technique scans an image from left to right such that <em>x</em> axis will represents time while <em>y</em> defines the pitch of the generated sound (brightness modulates the volume).</p>
+<p style="text-align: center;"><a href="http://www.seeingwithsound.com/winvoice.htm"><img class="aligncenter size-full wp-image-353" title="vOICe image to sound mapping" src="/wp-content/uploads/2011/01/Simple-line-and-dot-images1.gif" alt="" width="100" height="100" /></a></p>
+<p>We read web pages left to right (or right to left in some languages) and from top to down. For now lets map time to the vertical and pitch to the horizontal.</p>
+<p>For using snapshots of web pages with the vOICe java applet, I’ll remove glyphs’ noise (display only layout with <a href="http://www.volkside.com/tools/wirify/">Volkside Wirify</a> bookmarklet), inverse (brightness is volume) and rotate them <span class="numbers">90</span>˚ counter clockwise (to have our temporal dimension from left to right).</p>
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-356" title="preprocessing" src="/wp-content/uploads/2011/01/preprocessing11.jpg" alt="" width="500" height="500" /></p>
+<p>The applet below should be already playing the sonification of this image.</p>
+<p><strong>You can also “listen” to <a href="javascript:document.JavOICe.SetPar('',''); document.JavOICe.SetPar('URL','http://gridinoc.name/blog/wp-content/uploads/2011/01/wikipedia.gif'); document.JavOICe.Restart(true);">Wikipedia</a>, <a href="javascript:document.JavOICe.SetPar('',''); document.JavOICe.SetPar('URL','http://gridinoc.name/blog/wp-content/uploads/2011/01/amazon.gif'); document.JavOICe.Restart(true);">Amazon <span class="caps">UK</span></a>, a <a href="javascript:document.JavOICe.SetPar('',''); document.JavOICe.SetPar('URL','http://gridinoc.name/blog/wp-content/uploads/2011/01/facebook.gif'); document.JavOICe.Restart(true);">Facebook page</a> or <a href="javascript:document.JavOICe.SetPar('',''); document.JavOICe.SetPar('URL','http://gridinoc.name/blog/wp-content/uploads/2011/01/bbc.gif'); document.JavOICe.Restart(true);"><span class="caps">BBC</span> News</a>.</strong></p>
+<p style="text-align: center;">
+<applet codebase='/javoice/' code='The_vOICe.class' name='JavOICe' width=640 height=525></p>
+<param name="NFRAME"  value="1"></param>
+<param name="M"       value="64"></param>
+<param name="N"       value="64"></param>
+<param name="FL"      value="500"></param>
+<param name="FH"      value="5000"></param>
+<param name="FS"      value="22050"></param>
+<param name="T"       value="1.0"></param>
+<param name="REFRESH" value="0.0"></param>
+<param name="D"       value="1"></param>
+<param name="WINDOW"  value="2"></param>
+<param name="BINOC"   value="0"></param>
+<param name="BINAU"   value="1"></param>
+<param name="CLICK"   value="1"></param>
+<param name="CIW"     value="0.2"></param>
+<param name="DSI"     value="2"></param>
+<param name="URL"     value="http://gridinoc.name/blog/wp-content/uploads/2011/01/mozilla.gif"></param></applet><br /> The vOICe Java applet/​application written by <a href="http://www.seeingwithsound.com/javoice.htm">Peter B.L. Meijer</a></p>
+<style>.post-content {overflow:visible;}</style>
+      </div>
+  
+</article>    <nav id=page-nav>
+      
+      <div class=previous><a href="/2010/10/firefox-panorama-for-ebooks/" rel="prev">&larr; Previous</a></div>
+      <div class=next><a href="/2011/03/using-jetpack-on-jetpack/" rel="next">Next &rarr;</a></div>
+    </nav>
+    
+  </div>
+
+<aside role=complementary>
+    
+</aside>
+<footer role=contentinfo>
+    <small>© 2012 <a href="https://plus.google.com/u/0/113635591231911750164" rel=author>Laurian Gridinoc</a></small>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery||document.write('<script src="/wp-content/themes/publish/js/lib/jquery-1.7.1.min.js"><\/script>');</script>
+
+<script defer src='/wp-content/themes/publish/js/adc83b1.js'></script>
+
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-2526475-6"]);_gaq.push(["_trackPageview"]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();</script>
+
+
+
+</body>
+</html>

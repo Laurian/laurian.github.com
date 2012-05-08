@@ -1,0 +1,132 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=en><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang=en><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang=en><![endif]-->
+<!--[if gt IE 8]><!--> <html class=no-js lang=en manifest="manifest.appcache"> <!--<![endif]-->
+<head>
+  <meta charset=utf-8>
+
+  <title>Using Jetpack on Jetpack</title>
+  <meta name=description content="">
+  <meta name=author content="">
+  <meta name=viewport content="width=device-width,initial-scale=1">
+
+  <link rel=alternate type="application/rss+xml" title="NAMEBOUND Feed" href="http://feed.namebound.com/gridinoc">
+  <link rel=stylesheet href='/wp-content/themes/publish/css/d77e45c.css'>
+
+  <script type="text/javascript" src="http://use.typekit.com/jze3ujd.js"></script>
+  <script type="text/javascript">try{Typekit.load()}catch(e){};</script>
+  
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+  
+<!-- <link rel="canonical" href="/tag/1984/" /> -->
+
+<style type="text/css">
+sup {
+	vertical-align: 60%;
+	font-size: 75%;
+	line-height: 100%;
+}
+sub {
+	vertical-align: -10%;
+	font-size: 75%;
+	line-height: 100%;
+}
+.amp {
+	/*font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", "Warnock Pro", serif;*/
+	font-weight: normal;
+	/*font-style: italic;*/
+	/*font-size: 1.1em;
+	line-height: 1em;*/
+        font-weight: 300;
+}
+.caps {
+	/*font-size: 90%;*/
+        -moz-font-feature-settings: "smcp=1";
+        -ms-font-feature-settings: "smcp" 1;
+}
+.dquo {
+	margin-left:-.40em;
+}
+.quo {
+	margin-left:-.2em;
+}
+/* because formatting .numbers should consider your current font settings, we will not style it here */
+
+.numbers {
+        -moz-font-feature-settings: "pnum=1,onum=1";
+        -ms-font-feature-settings: "pnum" 1,"onum" 1;
+}
+
+body > header h2 {
+font-weight: 300;
+font-style: normal;
+}
+
+h3, h4, h5, h6 {
+color: black;
+}
+</style>
+</head>
+<body>
+
+  <header role=banner>
+    <hgroup>
+      <h1>
+		<a href="/" title="NAMEBOUND" rel=home>
+					<img alt=NAMEBOUND src="/wp-content/themes/publish/img/namebound.svg">
+		</a>
+	 </h1>
+      <h2>‘for magic consists in this, the true naming of a thing’ — Ursula Le Guin, A Wizard of Earthsea</h2>
+    </hgroup>
+  </header>
+
+  <nav role=navigation>
+    <ul id="menu-main" class="menu"></ul>  </nav>
+<div role=main class=single>
+  
+    
+<article id="post-357" class="post-357 post type-post status-publish format-standard hentry category-jetpack category-mozilla tag-jetpack tag-mozilla-add-ons tag-mozilla-firefox">
+  <header class=entry-header>
+    <h1 class=entry-title>Using Jetpack on Jetpack</h1>
+
+        <div class=entry-meta>
+      <a href="/2011/03/using-jetpack-on-jetpack/" title="02:08" rel="bookmark"><time class="entry-date" datetime="2011-03-21T02:08:19+00:00" pubdate>March 21, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="/profile/" title="View all posts by Laurian Gridinoc" rel="author">Laurian Gridinoc</a></span></span>    </div>
+      </header>
+
+  <div class=entry-content>
+    <p>I’ve been Saturday at the <a href="http://lanyrd.com/2011/state-of-the-browser/">State Of The Brower</a> — it was a brilliant day, great talks and conversations and I’ve gave my longest Jetpack (Mozilla Add-​on <span class="caps">SDK</span>) presentation (<span class="numbers">45</span>′) and I had no slides this time.</p>
+<p>I was preparing slides couple days ago then I thought that apart of duplicating bits from the existing documentation, and confuse the audience by switching between Keynote, TextMate, Terminal and Firefox; I thought that I should just show them what they will see when they will want to learn more later: the Mozilla Add-​on <span class="caps">SDK</span> <a href="https://jetpack.mozillalabs.com/">site</a> and <a href="https://jetpack.mozillalabs.com/sdk/latest/docs/">online documentation</a>, as rarely someone comes back to a set of slides.<span id="more-357"></span></p>
+<p>Now, the problem with the Jetpack documentation is that in order to get the feel of how those APIs work you have to copy paste code bits into an editor and use cfx tool to run them, or simpler, paste them into the <a href="https://builder.addons.mozilla.org/">Add-​on Builder</a>.</p>
+<p>But Jetpack can modify web pages, so I wrote a Jetpack that modifies the Jetpack documentation: it inserts a “Quick Example” at the top of each module page, example that can be run right there in the browser, in that very page.</p>
+<p style="text-align: center;"><a href="/wp-content/uploads/2011/03/page-worker-Add-on-SDK-Documentation1.jpg"><img class="aligncenter size-full wp-image-358" title="Augmented Page-worker documentation page" src="/wp-content/uploads/2011/03/page-worker-Add-on-SDK-Documentation1.jpg" alt="" width="692" height="478" /></a></p>
+<p>You can install this add-​on (it is restartless, all Jetpacks are) from <a href="https://addons.mozilla.org/en-US/firefox/addon/add-on-sdk-examples/">https://​addons​.mozilla​.org/​e​n​-​U​S​/​f​i​r​e​f​o​x​/​a​d​d​o​n​/​a​d​d​-​o​n​-​s​d​k​-​e​x​a​m​p​l​es/</a></p>
+<p>This way I was able to explain all the Jetpack modules without leaving the browser; next, I’ll see how can I embed examples from the Add-​on Builder, I’ll probably have to scrape them with the page-​worker module… <em>(to be continued)</em></p>
+      </div>
+  
+</article>    <nav id=page-nav>
+      
+      <div class=previous><a href="/2011/01/sonifying-web-pages/" rel="prev">&larr; Previous</a></div>
+      <div class=next><a href="/2011/03/firefox/" rel="next">Next &rarr;</a></div>
+    </nav>
+    
+  </div>
+
+<aside role=complementary>
+    
+</aside>
+<footer role=contentinfo>
+    <small>© 2012 <a href="https://plus.google.com/u/0/113635591231911750164" rel=author>Laurian Gridinoc</a></small>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery||document.write('<script src="/wp-content/themes/publish/js/lib/jquery-1.7.1.min.js"><\/script>');</script>
+
+<script defer src='/wp-content/themes/publish/js/adc83b1.js'></script>
+
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-2526475-6"]);_gaq.push(["_trackPageview"]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();</script>
+
+
+
+</body>
+</html>

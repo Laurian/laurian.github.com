@@ -1,0 +1,174 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=en><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang=en><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang=en><![endif]-->
+<!--[if gt IE 8]><!--> <html class=no-js lang=en manifest="manifest.appcache"> <!--<![endif]-->
+<head>
+  <meta charset=utf-8>
+
+  <title>Sharing Ubiquity Commands</title>
+  <meta name=description content="">
+  <meta name=author content="">
+  <meta name=viewport content="width=device-width,initial-scale=1">
+
+  <link rel=alternate type="application/rss+xml" title="NAMEBOUND Feed" href="http://feed.namebound.com/gridinoc">
+  <link rel=stylesheet href='/wp-content/themes/publish/css/d77e45c.css'>
+
+  <script type="text/javascript" src="http://use.typekit.com/jze3ujd.js"></script>
+  <script type="text/javascript">try{Typekit.load()}catch(e){};</script>
+  
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+  
+<!-- <link rel="canonical" href="/tag/1984/" /> -->
+
+<style type="text/css">
+sup {
+	vertical-align: 60%;
+	font-size: 75%;
+	line-height: 100%;
+}
+sub {
+	vertical-align: -10%;
+	font-size: 75%;
+	line-height: 100%;
+}
+.amp {
+	/*font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", "Warnock Pro", serif;*/
+	font-weight: normal;
+	/*font-style: italic;*/
+	/*font-size: 1.1em;
+	line-height: 1em;*/
+        font-weight: 300;
+}
+.caps {
+	/*font-size: 90%;*/
+        -moz-font-feature-settings: "smcp=1";
+        -ms-font-feature-settings: "smcp" 1;
+}
+.dquo {
+	margin-left:-.40em;
+}
+.quo {
+	margin-left:-.2em;
+}
+/* because formatting .numbers should consider your current font settings, we will not style it here */
+
+.numbers {
+        -moz-font-feature-settings: "pnum=1,onum=1";
+        -ms-font-feature-settings: "pnum" 1,"onum" 1;
+}
+
+body > header h2 {
+font-weight: 300;
+font-style: normal;
+}
+
+h3, h4, h5, h6 {
+color: black;
+}
+</style>
+</head>
+<body>
+
+  <header role=banner>
+    <hgroup>
+      <h1>
+		<a href="/" title="NAMEBOUND" rel=home>
+					<img alt=NAMEBOUND src="/wp-content/themes/publish/img/namebound.svg">
+		</a>
+	 </h1>
+      <h2>‘for magic consists in this, the true naming of a thing’ — Ursula Le Guin, A Wizard of Earthsea</h2>
+    </hgroup>
+  </header>
+
+  <nav role=navigation>
+    <ul id="menu-main" class="menu"></ul>  </nav>
+<div role=main class=single>
+  
+    
+<article id="post-118" class="post-118 post type-post status-publish format-standard hentry category-semantic-web category-ubiquity tag-aza-raskin tag-ubiquity tag-uniform-resource-identifier tag-uri-scheme tag-xpath tag-xpointer">
+  <header class=entry-header>
+    <h1 class=entry-title>Sharing Ubiquity Commands</h1>
+
+        <div class=entry-meta>
+      <a href="/2009/10/sharing-ubiquity-commands/" title="22:58" rel="bookmark"><time class="entry-date" datetime="2009-10-03T22:58:43+00:00" pubdate>October 3, 2009</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="/profile/" title="View all posts by Laurian" rel="author">Laurian</a></span></span>    </div>
+      </header>
+
+  <div class=entry-content>
+    <p>I recently spoke with Aza Raskin at <span class="caps">FOWA</span> on Ubiquity commands/​annotations sharing. I promised I’ll prototype something, here it is…</p>
+<p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="380" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="/ubiquity/share/demo.swf" /><embed type="application/x-shockwave-flash" width="480" height="380" src="/ubiquity/share/demo.swf"></embed></object><br />(If the video is clipped, <a href="/ubiquity/share/demo.swf">try it here</a>)</p>
+<p>When someone applies an Ubiquity command to a piece of content that tells us what’s the type of that content. The user is making an annotation which is not made for the annotation sake, but made for solving a real need. That annotation if shared could be useful in various ways.</p>
+<p>But first let’s look at all the data involved, consider that Alice is selecting some text on a web page, invokes Ubiquity and types ‘translate to japanese’. We have the folowing elements:</p>
+<ol>
+<li>user: anonymous or with an identity (<span class="caps">URI</span>)</li>
+<li>web page address (<span class="caps">URI</span>)</li>
+<li>selected content</li>
+<li>Ubiquity command (<span class="caps">URI</span>) with arguments</li>
+</ol>
+<p><span id="more-118"></span>We need to find a way to identify the last <span class="numbers">3</span> components with a single <span class="caps">URI</span>. Why? to tap into what <span class="caps">URI</span> power: you could bookmark, synchronise bookmarks online, view the applied command in your browser history and just share that “link” via twitter, facebook, etc.</p>
+<p>We can already point to a specific location into a web page, provided that that location is emcompassed into an elment that has an id, like:</p>
+<p><a href="http://events.carsonified.com/fowa/2009/london/speakers#azaraskin">http://​events​.carsonified​.com/​f​o​w​a​/​<span class="numbers">2</span>​<span class="numbers">0</span>​<span class="numbers">0</span>​<span class="numbers">9</span>​/​l​o​n​d​o​n​/​s​p​e​a​k​ers<strong>#azaraskin</strong></a></p>
+<p>If that element had no id, we could use XPath to point to it, the full path in the <span class="caps">DOM</span> would be:</p>
+<p>/html/body/div[<span class="numbers">3</span>]/div/ul/li[<span class="numbers">3</span>]/div/a</p>
+<p>Or we could just simply assign identifiers like the <a href="http://www.eekim.com/software/purple/purple.html">purple numbers</a>:</p>
+<p><a href="http://www.purpleslurple.net/ps.php?theurl=http%3A%2F%2Fevents.carsonified.com%2Ffowa%2F2009%2Flondon%2Fspeakers#purp199">http://www.purpleslurple.net/ps.php?theurl=http…events.carsonified.com…speakers<strong>#purp<span class="numbers">199</span></strong></a></p>
+<p>However we have an specification to address such content — which even does better — it allows addressing of ranges, imagine that your selection crosses element boundaries (and users do such selections), like selecting <em>“What you’ll learn * The advantages to using Objective-​J, Atlas and Cappuccino”</em> from the <a href="http://events.carsonified.com/fowa/2009/london/workshops#workshop_55">Atlas workshop description</a>. That selection starts with all the content of a heading and ends up in a paragraph. The specification that can address this is <a href="http://en.wikipedia.org/wiki/XPointer">XPointer</a>, the <span class="caps">URI</span> that points to this selection in that particular web page looks like this:</p>
+<p><a href="http://events.carsonified.com/fowa/2009/london/workshops#xpointer%28start-point%28string-range%28/html[1]/body[1]/div[3]/div[1]/ul[1]/li[3]/div[1]/h6[1],%20%22%22,%201,%201%29%29/range-to%28end-point%28string-range%28/html[1]/body[1]/div[3]/div[1]/ul[1]/li[3]/div[1]/div[1]/p[1],%20%22%22,%2059,%201%29%29%29%29">http://​events​.carsonified​.com/​f​o​w​a​/​<span class="numbers">2</span>​<span class="numbers">0</span>​<span class="numbers">0</span>​<span class="numbers">9</span>​/​l​o​n​d​o​n​/​w​o​r​k​s​h​ops<strong>#xpointer</strong>(start-point(string-range(/html[<span class="numbers">1</span>]/body[<span class="numbers">1</span>]/div[<span class="numbers">3</span>]/div[<span class="numbers">1</span>]/ul[<span class="numbers">1</span>]/li[<span class="numbers">3</span>]/div[<span class="numbers">1</span>]/h<span class="numbers">6</span>[<span class="numbers">1</span>], “”, <span class="numbers">1</span>, <span class="numbers">1</span>))/range-to(end-point(string-range(/html[<span class="numbers">1</span>]/body[<span class="numbers">1</span>]/div[<span class="numbers">3</span>]/div[<span class="numbers">1</span>]/ul[<span class="numbers">1</span>]/li[<span class="numbers">3</span>]/div[<span class="numbers">1</span>]/div[<span class="numbers">1</span>]/p[<span class="numbers">1</span>], “”, <span class="numbers">59</span>, <span class="numbers">1</span>))))</a></p>
+<p>It is quite verbose, if you want to pass it around you could shorten it to <a href="http://bit.ly/lkDFs">http://​bit​.ly/​l​k​DFs</a> for example.</p>
+<p>Now to pack the Ubiquity command line into, we could use a convention, like:</p>
+<p>http://…<strong>#ubiquity:command-line;xpointer</strong>(…</p>
+<p>for example (here the <span class="caps">URL</span> is properly escaped):</p>
+<p><a href="http://example.com/#ubiquity:translate%20to%20japanese;xpointer%28string-range%28/html[1]/body[1]/p[2],%20%22%22,%201,%2096%29%29">http://example.com/#ubiquity:translate%<span class="numbers">20</span>to%<span class="numbers">20</span>japanese;xpointer%<span class="numbers">28</span>string-range%<span class="numbers">28</span>/html[<span class="numbers">1</span>]/body[<span class="numbers">1</span>]/p[<span class="numbers">2</span>],%<span class="numbers">20</span>%<span class="numbers">22</span>%<span class="numbers">22</span>,%<span class="numbers">201</span>,%<span class="numbers">2096</span>%<span class="numbers">29</span>%<span class="numbers">29</span></a> (again shorter would look like <a href="http://bit.ly/4uf0bX">http://​bit​.ly/​<span class="numbers">4</span>​u​f​<span class="numbers">0</span>bX</a>)</p>
+<p>Having this convention, all it is needed is to listen to Ubiquity commands and update the location bar with the Ubiquity <span class="caps">URI</span>, and when the user loads a page with such an <span class="caps">URI</span> it should reproduce the selection and invoke Ubiquity.</p>
+<p>By the magic of Ubiquity and <a href="http://xpointerlib.mozdev.org/">XPointer extension</a> for Firefox, I prototyped it in couple hours. Playing with it I observed the following issues:</p>
+<ul>
+<li>it “records” in the location bar only one (the last) command</li>
+<li>it is bookmarkable but the title of the bookmark doesn’t disclose the existance of the command</li>
+<li>if you share it with someone that opens it in another browser than Firefox, or it has Firefox without Ubiquity, or have Ubiquity but without the command you shared, that person won’t notice anything (just loads the normal page, #ubiquity… is ignored)</li>
+</ul>
+<p>For the first issues there are solutions, like storing somewhere (like in <a href="http://www.tinydb.org/">tinydb​.org</a>) a stack of ‘Ubiquity URIs’ to be applied in a specific order, and<br />
+<script src="http://posterous.com/javascripts/tiny_mce/themes/advanced/langs/en.js?1256951321" type="text/javascript"></script><br /> pass the stack identifier around.</p>
+<p>I added the command line as a prefix to the title, and solved the second issue; now in browser’s history or in a bookmark the above example reads “translate to japanese: Example Web Page”.</p>
+<p>The third issue require an intermediate page that would be shown if the user has no Firefox, Ubiquity or that specific command; but this solution creates other issues:</p>
+<ul>
+<li>it has a different <span class="caps">URI</span>, which you need to use explicitly when you share the Ubiquity applied command</li>
+<li>there is no way to detect from a web page that Ubiquity is installed (<a href="http://groups.google.com/group/ubiquity-firefox/browse_thread/thread/782a005dcabd547c">it is a security risk</a>) or what commands are available</li>
+</ul>
+<p>Enough talking, go play with the prototype (you will see the intermediate page mentione above):</p>
+<p><a href="/ubiquity/share">http://​namebound​.com/​u​b​i​q​u​i​t​y​/​s​h​are</a></p>
+<p><em>Note: You need to <strong>install <a href="http://xpointerlib.mozdev.org/">xpointerlib extension</a></strong> and Ubiquity must be at least <span class="numbers">0</span>.<span class="numbers">5</span>.<span class="numbers">5</span>pre<span class="numbers">7</span></em><em>.</em></p>
+<p><span class="caps">TODO</span>:</p>
+<ol>
+<li>scroll page to the selection, show icon to invoke Ubiquity</li>
+<li>wrap selection with div/​span and annotate it with RDFa (to allow other extensions to participate)</li>
+<li>publish user – annotation relation (on user choice)</li>
+<li>load user, and friends annotations (imagine that Alice visist Bob’s blog post on tonight’s party, and the venue was already mapped with Ubiquity by Fred; Alice will see an icon/​hint to apply the map command on that snippet)</li>
+</ol>
+      </div>
+  
+</article>    <nav id=page-nav>
+      
+      <div class=previous><a href="/2009/09/here-be-dragons/" rel="prev">&larr; Previous</a></div>
+      <div class=next><a href="/2009/10/cyberpunk-is-dead/" rel="next">Next &rarr;</a></div>
+    </nav>
+    
+  </div>
+
+<aside role=complementary>
+    
+</aside>
+<footer role=contentinfo>
+    <small>© 2012 <a href="https://plus.google.com/u/0/113635591231911750164" rel=author>Laurian Gridinoc</a></small>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery||document.write('<script src="/wp-content/themes/publish/js/lib/jquery-1.7.1.min.js"><\/script>');</script>
+
+<script defer src='/wp-content/themes/publish/js/adc83b1.js'></script>
+
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-2526475-6"]);_gaq.push(["_trackPageview"]);(function(){var b=document.createElement("script");b.type="text/javascript";b.async=true;b.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(b,a)})();</script>
+
+
+
+</body>
+</html>
