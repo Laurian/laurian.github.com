@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  version="2.0">
+    <channel>
+        <title>NAMEBOUND</title>
+        <description>‘for magic consists in this, the true naming of a thing’ — Ursula Le Guin, A Wizard of Earthsea</description>
+        <link>http://namebound.com/</link>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <language>en-gb</language>
+        <lastBuildDate>Sat, 31 Mar 2012 15:21:09 +0100</lastBuildDate>
+        <pubDate>Sat, 31 Mar 2012 14:48:32 +0100</pubDate>
+        <generator>FeedForAll Mac v2.1 (2.1.0.0) unlicensed version; http://www.FeedForAll.com/</generator>
+        <item>
+            <title>The Perplex &amp; Other Stories</title>
+            <description>In the “The Future Of Information” Ted Nelson states: “The News” is a perplex, unless somebody edits it for you, in which case it has a point of view.&lt;br /&gt;
+&lt;br /&gt;
+He calls a perplex the information of the following form: a tangle of items and relations; of facts, partial facts, beliefs, statements and views which can contradict each other in many different ways.&lt;br /&gt;
+An article is a curated set of such bits presented in a way that exhibits a sense of order, presenting a point of view over a perplex.</description>
+            <link>http://namebound.com/2011/06/the-perplex-and-other-stories/</link>
+            <category>opennews</category>
+            <guid isPermaLink="false">DE606302-2C63-45ED-BD4A-F293E552EAE0-64721-00020C37E3CD45EE-FFA</guid>
+            <pubDate>Sun, 05 Jun 2011 14:49:12 +0100</pubDate>
+        </item>
+
+        <item>
+            <title>News Stories &amp; Interaction</title>
+            <description>To convey the internal structure of complex objects, illustrators create exploded views to expose hidden parts, to convey their global structure while exposing local semantic relationships.&lt;br /&gt;
+Stories are such objects. I’m making a tool to illustrate that.</description>
+            <link>http://namebound.com/2011/07/news-stories-interaction/</link>
+            <category>opennews</category>
+            <guid isPermaLink="false">820DE798-C0F9-42E8-A801-4C73C61684EE-64721-00020C2E4649BC5D-FFA</guid>
+            <pubDate>Sat, 30 Jul 2011 14:49:22 +0100</pubDate>
+        </item>
+
+        <item>
+            <title>Collaboration in PLESPER</title>
+            <description>In my previous post on News Stories &amp; Interaction where I introduced PLESPER, I haven’t detailed the collaboration apart of hinting of the possibility of having comments/​assertions on various article elements. And since those comments are bound to a shortened link and processed in the browser (extension) they are global, a comment thread can span various sites.</description>
+            <link>http://namebound.com/2011/08/collaboration-in-plesper/</link>
+            <category>opennews</category>
+            <guid isPermaLink="false">9CFD30C1-E064-492A-9940-822C3B1FFD8F-64721-00020C236982F443-FFA</guid>
+            <pubDate>Mon, 01 Aug 2011 14:49:26 +0100</pubDate>
+        </item>
+
+        <item>
+            <title>PLESPER</title>
+            <description>Rarely our exper­i­ence with a news story is a dir­ect one, therefore our point of view on a story is driven by habit and con­ven­tions and not created through a first hand exper­i­ence. To under­stand a such story you have not to only under­stand the elements that com­poses it, but the relationship between them. Under­stand­ing means decon­struc­tion and reconstruction.</description>
+            <link>http://namebound.com/2011/08/plesper/</link>
+            <category>opennews</category>
+            <guid isPermaLink="false">1855C189-9C38-4463-807C-A3A90CB9601B-64721-00020C0F45BA3876-FFA</guid>
+            <pubDate>Tue, 09 Aug 2011 14:49:29 +0100</pubDate>
+        </item>
+
+        <item>
+            <title>Timeboxing the News</title>
+            <description>At the Touch the News design challenge at the Mozilla Festival, I was in team 6 with Heather Lesson, Peter O’Shaughnessy, Carlo Frinolli, Nick Smith, Gavin McFarland and Chris Warring.&lt;br /&gt;
+&lt;br /&gt;
+We focused on how people consume news on the iPad with regard to location, time of day and time available to spend on news.</description>
+            <link>http://namebound.com/2011/11/timeboxing-the-news/</link>
+            <category>opennews</category>
+            <guid isPermaLink="false">A8A5B507-5806-49B5-AA33-72D776CFB6E2-64721-00020BFC4A4F7175-FFA</guid>
+            <pubDate>Tue, 08 Nov 2011 13:49:32 +0000</pubDate>
+        </item>
+
+        <item>
+            <title>Visualising My News Diet</title>
+            <description>At the Visualize Your Media Diet learning lab at the Mozila Festival ran by Nate Matias, Matt Stempeck and Dan Schultz from the MIT Media Lab’s Center for Civic Media, the participants had to draw how would they like to visualise their media diet, then discuss it.</description>
+            <link>http://namebound.com/2011/11/visualising-my-news-diet/</link>
+            <category>opennews</category>
+            <guid isPermaLink="false">6271256C-3746-4BBB-A4D3-9C2E93BA1B2F-64721-00020BC6E0B55D8B-FFA</guid>
+            <pubDate>Wed, 09 Nov 2011 13:50:00 +0000</pubDate>
+        </item>
+
+    </channel>
+</rss>
