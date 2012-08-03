@@ -1,6 +1,0 @@
-<!--#if expr='$SPDY_VERSION = 2' -->
-SPDY!
-<!--#endif -->
-<hr>
-<pre>
-<!--#printenv -->
