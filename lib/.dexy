@@ -1,0 +1,28 @@
+{
+
+	"*.html"	:	{ "final" : false },
+	"_*.html"	:	{ "final" : false },
+
+	"*.jpg" : {},
+	"*.gif" : {},
+	"*.js" : {},
+	"*.pdf" : {},
+	"*.svg" : {},
+	"*.png" : {},
+	"*.txt" : {},
+ 	"*.tar.gz" : {},
+ 	"*.jar" : {},
+	"*.css" : {},
+	"*.swf" : {},
+	"*.xml" : {},
+
+	"*.woff" : {},
+	"*.ttf" : {},
+	"*.otf" : {},
+	"*.svgz" : {},
+	
+
+	".htaccess" : {},
+	"*.dexy" : {},
+	".dexy|dexy" : {}
+}

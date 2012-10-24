@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!--#if expr='$HTTPS = "on"' -->
+  <!--#set var="connection" value="ssl" -->
+  <!--#else -->
+  <!--#set var="connection" value="no-ssl" -->
+  <link rel="dns-prefetch" href="//⊘.⊕.ws">
+  <link rel="dns-prefetch" href="//⊙.⊕.ws">
+  <link rel="dns-prefetch" href="//⊝.⊕.ws">
+  <link rel="dns-prefetch" href="//⊗.⊕.ws">
+  <!--#endif -->
+  <!--#if expr='$SPDY_VERSION = 2' -->
+  <!--#set var="connection" value="spdy" -->
+  <!--#endif -->
+  
+  <meta name="robots" content="noindex,nofollow">
+  <title>TODO: title!</title>
+  <meta name="description" content="">
+  <meta name="author" content="Laurian Gridinoc">
+
+  <!-- <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content=""> -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <!-- <link rel="apple-touch-startup-image" href="/apple-touch-startup-image.png"> -->
+  <!-- <meta name="apple-mobile-web-app-capable" content="yes"> -->
+  <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black"> -->
+  
+  <!-- <link rel="canonical" href=""> -->
+  <!-- <link rel="alternate" type="application/rss+xml" title="NAMEBOUND Feed" href="http://feed.namebound.com/gridinoc"> -->
+  <!-- <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml"> -->
+  <!-- <link rel="pingback" href=""> -->
+  <!-- <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"> -->
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- http://blog.55minutes.com/2012/01/multi-resolution-favicons-and-safaris-reading-list/ -->
+  <!-- <link href="/favicon.png" rel="shortcut icon" type="image/png"> -->
+  <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+  <link href="/css/style.css" rel="stylesheet">
+  <script src="//use.typekit.com/jze3ujd.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+
+  <script src="/lib/LABjs/LAB.js"></script>
+  <script>
+      //<!--#echo var="connection" --> <!--#echo var="GEOIP_CONTINENT_CODE" --> <!--#echo var="GEOIP_COUNTRY_CODE" -->
+      var c = '<!--#echo var="connection" -->';
+
+        var solarized = {
+        base03:    '#002b36'
+      , base02:    '#073642'
+      , base01:    '#586e75'
+      , base00:    '#657b83'
+      , base0:     '#839496'
+      , base1:     '#93a1a1'
+      , base2:     '#eee8d5'
+      , base3:     '#fdf6e3'
+      , yellow:    '#b58900'
+      , orange:    '#cb4b16'
+      , red:       '#dc322f'
+      , magenta:   '#d33682'
+      , violet:    '#6c71c4'
+      , blue:      '#268bd2'
+      , cyan:      '#2aa198'
+      , green:     '#859900'
+    };
+
+    var iAWriterColor = '#424242';
+    var iAWriterBackgroundColor = '#f5f6f6';
+
+    $LAB
+            .script("/lib/modernizr-2.5.3.js")
+
+            .script("/lib/d3/d3.v2.js")
+            .script("/lib/raphael/raphael.js")
+
+            .script("/lib/underscore/underscore.js")
+            .script("/lib/Tangle/Tangle.js")
+
+            .script("/lib/CodeMirror2/lib/codemirror.js")
+            .script("/lib/CodeMirror2/mode/javascript/javascript.js")
+            .script("/lib/CodeMirror2/lib/util/searchcursor.js")
+            .script("/lib/CodeMirror2/lib/util/match-highlighter.js")
+
+            .script("/lib/jquery-1.7.2.js").wait()
+            .script("/js/plugins.js")
+            .script("/lib/jquery-color/jquery.color.js")
+            .script("/lib/jquery-approach/jquery.approach.js")
+            .script("/lib/raphael-svg-import/raphael-svg-import.js").wait(function () {
+
+
+                var lastMarker;
+
+                window.trace = function (line) {
+                  window.pc = line;
+                  //test, skip 1st line
+                  if (line == 0) return;
+                  setTimeout(function(){
+                    var info = editor.lineInfo(line);
+                    var marker = "%N%<span style=\"color: "+solarized.blue+"\">●</span>";
+                    if (info && info.markerText) {
+                          // editor.clearMarker(line);
+                          marker = info.markerText.replace(/●</g, "●●<");
+                    }
+                    editor.setMarker(line, marker);
+                  }, 500);
+                }
+              
+                function run() {
+                    if (lastMarker) editor.clearMarker(lastMarker);
+                    var errors = false;
+                    try {
+                      var lines = editor.getValue().replace(/\r\n/g, "\n").split("\n");//.match(/[^\r\n]+/g)
+                      // console.log(lines);
+
+                      var source = "";
+
+                      $.each(lines, function (i, line) {
+                        source += ";trace(" + i + "); " + line + "\n";
+                      });
+                      // console.log(source);
+
+                      var code = new Function(source);
+                      code();
+                    } catch (err) {
+                      console.log(err);
+                      console.log('' + err);
+                      console.log('' + err.line);
+
+                      lastMarker = err.line - 1;
+                      var info = editor.lineInfo(err.line - 1);
+                      if (info && info.markerText) {
+                        editor.clearMarker(err.line - 1);
+            } else {
+                        editor.setMarker(err.line - 1, "%N%<span style=\"color: "+solarized.magenta+"\" title=\""+err.message+"\">●</span>");
+            }
+                      // $('.CodeMirror-gutter-text span').tooltip({ 
+                      //   position: "center left", 
+                      //   offset: [3, 2],
+                      //   opacity: 0.7, 
+                      //   effect: 'slide',
+                      //   direction: 'left'
+                      //   });//.dynamic();
+                      
+                      errors = true;
+                    }
+                }
+
+                var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                  lineNumbers: true,
+                  mode: "javascript",
+                  tabSize: 2,
+                  indentUnit: 2,
+                  indentWithTabs: true,
+                  lineWrapping: false,
+                  matchBrackets: true,
+                  onCursorActivity: function() {
+                    editor.matchHighlight("CodeMirror-matchhighlight");
+                    editor.setLineClass(hlLine, null, null);
+                    hlLine = editor.setLineClass(editor.getCursor().line, null, "activeline");
+                  },
+                  onGutterClick: function(cm, n) {
+                    var info = cm.lineInfo(n);
+                    if (info.markerText) {
+                      if (info.markerText.indexOf("icon-play-circle") > -1) {
+                        $(".CodeMirror-gutter-text .icon-play-circle")
+                        .css({
+                          top: $(".CodeMirror-gutter-text").height() + 42
+                        })
+                        .toggleClass("active");
+
+                        if ($(".CodeMirror-gutter-text .icon-play-circle").hasClass("active")) run();
+
+                        return;
+                      }
+                      cm.clearMarker(n);
+                    } else {
+                      cm.setMarker(n, "%N%<span style=\"color: #900\">●</span>");
+                    }
+
+                    setTimeout(function(){$(".CodeMirror-gutter-text pre")
+                      .css({color: "#f5f6f6"})
+                      .approach({
+                      color: "#aaa"
+                    }, 75);}, 100);
+                  }
+                });
+
+                var hlLine = editor.setLineClass(0, "activeline");
+                var info = editor.lineInfo(0);
+                if (info.markerText) {
+                   editor.clearMarker(0);
+        } else {
+                   editor.setMarker(0, "%N%<span style=\"color: #00baff\"><i class='icon-play-circle'></i></span>");
+        }
+
+                $(".CodeMirror-gutter-text pre")
+                .approach({
+                    color: "#aaa"
+                }, 75);
+
+            });
+
+
+  </script>
+
+  <style>
+      {{ pygments['pastie.css'] }}
+  </style>
+</head>
+<body>
+
+
+
+<!--[if lt IE 9]><p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+<header role="banner">
+  <hgroup>
+    <h1><a href="/" title="NAMEBOUND" rel="home">NAMEBOUND</a></h1>
+    <h2>‘for magic consists in this, the true naming of a thing’ — Ursula Le Guin, A Wizard of Earthsea</h2>
+  </hgroup>
+</header>
+
+<article>
